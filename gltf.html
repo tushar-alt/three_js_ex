@@ -1,0 +1,589 @@
+<html>
+  <head>
+    <title>Three JS</title>
+    <style>	
+	#myCanvas1{
+    background:transparent;
+}
+	body
+	{
+		margin: 0;
+		overflow: hidden;
+		background-image: url(data:image/png;base64,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), linear-gradient(#fff 0%, #fff 25%, #c8d0da 50%, #6a7f9a 75%, #434e5b 100%); 
+    }
+    </style>
+  </head>
+  <body>
+	
+    <canvas id="myCanvas1"></canvas>
+<div>
+
+	<button onclick="Blue()" style="padding: 5px;" id="btntexture">
+        <img src="https://unitycompression.azurewebsites.net/AvatarCreator/Server/ClothesImages/Outfit_1.png" style="width: 106px;height: 141px;" alt="buttonpng" border="0" />
+      </button>
+	  <button onclick="Red()" style="padding: 5px;" id="btntexture">
+        <img src="https://unitycompression.azurewebsites.net/AvatarCreator/Server/ClothesImages/Outfit_4.png" style="width: 106px;height: 141px;" alt="buttonpng" border="0" />
+      </button>
+
+	  <button onclick="Green()" style="padding: 5px;" id="btntexture">
+        <img src="https://unitycompression.azurewebsites.net/AvatarCreator/Server/ClothesImages/Outfit_5.png" style="width: 106px;height: 141px;" alt="buttonpng" border="0" />
+      </button>
+	  <button onmousedown="cam()"  id="btntexture">
+        <img src="z_out.jpg" style="  width: 40px ;  height: 40px; position: absolute; top: 400px;left: 1850px;"   />
+      </button>
+	  <button onmousedown="cam2()"  id="btntexture">
+        <img src="z_in.png" style="  width: 40px ;  height: 40px; position: absolute; top: 450px;left: 1850px;"   />
+      </button>
+	  <button onmousedown="camereset()"  id="btntexture">
+        <img src="r_cam.png" style="  width: 40px ;  height: 40px; position: absolute; top: 500px;left: 1850px;"  />
+      </button>
+	  <button onmousedown="meshreset()"  id="btntexture">
+        <img src="r_clothes.png" style="  width: 40px ;  height: 40px; position: absolute; top: 550px;left: 1850px;"  />
+      </button>
+<!-- <input type="button" onclick="Red()" style="padding: 5px;" id="btntexture" value="Outfit 1" /> 
+<input type="button" onclick="Green()" style="padding: 5px;" id="btntexture" value="Outfit 2" />
+<input type="button" onclick="Blue()" style="padding: 5px;" id="btntexture" value="Outfit 3" />-->
+
+<!-- 
+<input type="button" onclick="Org()" style="padding: 5px;" id="btntexture" value="Change Taxture" />
+<br>
+<input type="button" onclick="laltenbody()" style="padding: 5px;" id="btntexture" value="Body Color Change" />
+<input type="button" onclick="laltenchain()" style="padding: 5px;" id="btntexture" value="Chain Color Change" />
+<input type="button" onclick="lalten()" style="padding: 5px;" id="btntexture" value="Lalten Color Change" />
+<br>
+<input type="hidden" id="hdnpart" value="" />
+<select id="ddlpart">
+	<option value=""> Select part</option>
+	<option value="Mesh.026_0">A</option>
+	<option value="Mesh.026_1">B</option>
+	<option value="Mesh.026_2">C</option>
+	<option value="Mesh.026_3">D</option>
+	<option value="Mesh.026_4">E</option>
+	<option value="Mesh.026_5">F</option>
+	<option value="Mesh.026_6">G</option>
+</select>
+
+<select id="ddlcolor">
+	<option value=""> Select Color</option>
+	<option value="0xff0000">Red</option>
+	<option value="0x008000">Green</option>
+	<option value="0x0000FF">Blue</option>
+</select> -->
+<!-- <input type="button" value="Change" onclick="chnage()" /> -->
+</div>
+	<script src="VRButton.js"></script>
+	<script src="webvr.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/104/three.js"></script>
+    <script src="GLTFLoader.js"></script>
+    <script src="OrbitControls.js"></script>
+	<script src="DRACOLoader.js"></script>
+	<script src="vrstats.js" type="module"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.9/dat.gui.min.js" integrity="sha512-WoO4Ih0CDOSLYafy22wZD/mcJ7k0ESLqtQsFa6zFKnEUrbtuGU+GkLtVhgt93xa2qewG5gKEC6CWlN8OaCTSVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+var mesh;
+var mixer;
+var gl;
+var bit = 0;
+		function chnage(){
+			var color = {};
+	color.col=document.getElementById("ddlcolor").value;;
+	color.partname = document.getElementById("ddlpart").value;
+	selectSwatch(color);
+		}
+
+
+function Red(){
+
+	changecloth('outfit_4');
+// var model = scene;
+// var newMaterial = new THREE.MeshStandardMaterial({color: 0x966F33});
+// model.traverse((o) => {
+//   if (o.isMesh) o.material = newMaterial;
+// });
+}
+function Green(){
+	changecloth('outfit_5');
+//  var model = scene;
+//  var newMaterial = new THREE.MeshStandardMaterial({color: 0x008000});
+//  model.traverse((o) => {
+//    if (o.isMesh) o.material = newMaterial;
+//  });
+}
+
+
+function Blue(){
+	changecloth('outfit_1');
+// var model = scene;
+// var newMaterial = new THREE.MeshStandardMaterial({color: 0x0000FF});
+// model.traverse((o) => {
+//   if (o.isMesh) o.material = newMaterial;
+// });
+}
+
+
+function cam(){
+	if(camera.position.z<6.759999999999995){
+	const currentPosition = camera.position.z;
+	
+
+  // Define the new camera position by adding or subtracting a value from the current position
+  const newPosition = currentPosition + 0.5;
+
+  // Update the camera position
+  camera.position.z = newPosition;
+
+  console.log(camera.position.z);}
+  
+
+
+}
+
+
+function printcampos(){
+	console.log(camera.position.x);
+	console.log(camera.position.y);
+	console.log(camera.position.z);
+}
+
+function cam2(){
+	if(camera.position.z>3.26){
+	const currentPosition = camera.position.z;
+
+  // Define the new camera position by adding or subtracting a value from the current position
+  const newPosition = currentPosition - 0.5;
+
+  // Update the camera position
+  camera.position.z = newPosition;
+  console.log(camera.position.z);}
+
+
+}
+function camereset(){
+	camera.position.x = 1.0200000000000002;
+	camera.position.y = 1.6000000000000005;
+	camera.position.z = 3.26;
+	
+
+}
+function meshreset(){
+	Red();
+}
+function Org(){
+	let txt = new THREE.TextureLoader().load('https://iaugmentcdnlive.azureedge.net/category/160220223937383.jpg');
+txt.repeat.set(2, 2, 2);
+txt.wrapS = THREE.RepeatWrapping;
+txt.wrapT = THREE.RepeatWrapping;
+new_mtl = new THREE.MeshPhongMaterial({
+      map: txt,
+      shininess: 60 ? 60 : 10 });
+var model = scene;
+var newMaterial = new THREE.MeshStandardMaterial({color: 0xff0000});
+model.traverse((o) => {
+  if (o.isMesh) o.material = new_mtl;
+});
+}
+
+function laltenbody(){
+	var color = {};
+	color.col="0x000000FF";
+	color.partname = "LanternPole_Body";
+	selectSwatch(color);
+}
+
+function laltenchain(){
+	var color = {};
+	color.col="0x0000FF00";
+	color.partname = "LanternPole_Chain";
+	selectSwatch(color);
+}
+
+function lalten(){
+	var color = {};
+	color.col="0x00FFFF00";
+	color.partname = "LanternPole_Lantern";
+	selectSwatch(color);
+}
+
+function lalten123(){
+	var color = {};
+	color.texture ='https://iaugmentcdnlive.azureedge.net/category/160220223937383.jpg',
+	color.partname = "LanternPole_Body";
+	color.size = [2, 2, 2];
+    color.shininess = 60 ;
+	selectSwatch(color);
+}
+
+    const gui = new dat.GUI();
+	const fanProperties = gui.addFolder('Fan Properties');
+	const fanPosition = fanProperties.addFolder('Position')
+	const fanRotate = fanProperties.addFolder('Rotation')
+	const fanCamera = fanProperties.addFolder('Camera')
+	const Direction1 = fanProperties.addFolder('Direction1')
+	  
+      //Scene
+      var scene = new THREE.Scene();
+      //Camera
+		var height = window.innerHeight;
+		var width = window.innerWidth;
+		var distance = 2000;
+		var diag = Math.sqrt((height*height)+(width*width))
+		var fov = 2 * Math.atan((diag) / (2 * distance)) * (180 / Math.PI); //Field of View
+		var camera = new THREE.PerspectiveCamera(fov, window.innerWidth / window.innerHeight, 0.1, distance);
+		camera.position.set(1.02, 1.6, 3.26);
+		fanCamera.add(camera.position, 'x').min(-100).max(100).step(0.01);
+	fanCamera.add(camera.position, 'y').min(-100).max(100).step(0.01);
+	fanCamera.add(camera.position, 'z').min(-100).max(100).step(0.01);
+      //Canvas
+      var myCanvas = document.getElementById('myCanvas1');
+
+      //Renderer
+      var renderer = new THREE.WebGLRenderer({
+        antialias: true,
+        canvas: myCanvas,
+		alpha: true
+      });
+
+
+		//renderer.setClearColor(0x000000);
+		renderer.setPixelRatio(window.devicePixelRatio);
+		renderer.setSize(window.innerWidth, window.innerHeight);
+		renderer.shadowMap.enabled = true;
+    	renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    	renderer.gammaInput = true;
+    	renderer.gammaOutput = true;
+    	renderer.antialias = true;
+		document.body.appendChild( renderer.domElement );
+
+		//LIGHTS
+ 		var lightSize = 250;
+ var pointLight = new THREE.PointLight(0xF4E99B, 100, lightSize, 2);
+ pointLight.position.set(210, 0, 110);
+ pointLight.castShadow = true;
+ //scene.add(pointLight);
+
+ var pointLight = new THREE.PointLight(0xF4E99B, 100, lightSize, 2);
+ pointLight.position.set(-210, 0, -50);
+ pointLight.castShadow = true;
+ //scene.add(pointLight);
+
+ var pointLight = new THREE.PointLight(0xF4E99B, 30, lightSize, 2);
+ pointLight.position.set(-110, 0, -110);
+ pointLight.castShadow = true;
+ scene.add(pointLight);
+
+
+
+		var light = new THREE.AmbientLight(0xFBFDD3, 1);
+		//scene.add(light);
+
+	   var directionalLight = new THREE.DirectionalLight(0xFBFDD3, 6);
+         directionalLight.position.set(35.24, 12.4, 95);
+         scene.add(directionalLight);
+
+		
+		 
+
+	   var directionalLight1 = new THREE.DirectionalLight(0xFBFDD3, 3);
+       directionalLight1.position.set(33.46, 12.14, -200);
+       scene.add(directionalLight1);
+	   Direction1.add(directionalLight1.position,'x').min(-200).max(200).step(0.01)
+	   Direction1.add(directionalLight1.position,'y').min(-200).max(500).step(0.01)
+	   Direction1.add(directionalLight1.position,'z').min(-200).max(500).step(0.01)
+	  
+	  
+
+		//OrbitControls
+		orbit = new THREE.OrbitControls(camera, renderer.domElement);
+		//orbit.maxPolarAngle = Math.PI / 2;
+		orbit.update();
+
+		// Instantiate a loader
+		setTimeout(function(){
+		var loader = new THREE.GLTFLoader();
+		loader.load('https://iaugmentlivebak.blob.core.windows.net/product/Avatar_Sushil.glb', handle_load);
+	})
+
+        var loader1 = new THREE.GLTFLoader();
+		const dracoLoader = new THREE.DRACOLoader()
+        dracoLoader.setDecoderPath('https://www.gstatic.com/draco/versioned/decoders/1.5.5/')
+		loader1.setDRACOLoader(dracoLoader);
+		loader1.load('https://iaugmentlivebak.blob.core.windows.net/product/Anim_idle.glb', handle_load1);
+
+		
+    var amin;
+		
+
+	function handle_load(gltf)
+	{
+		gltf.animations = amin;
+        gl = gltf;
+		gltf.scene.position.set(0, 0, 0)
+		gltf.scene.rotation.set(0, 0, 0)
+		fanPosition.add(gltf.scene.position, 'x').min(-100).max(100).step(0.01);
+						fanPosition.add(gltf.scene.position, 'y').min(-2000).max(100).step(0.01);
+						fanPosition.add(gltf.scene.position, 'z').min(-2000).max(100).step(0.01);
+
+						fanRotate.add(gltf.scene.rotation, 'x').min(-100).max(100).step(0.01);
+						fanRotate.add(gltf.scene.rotation, 'y').min(-100).max(100).step(0.01);
+						fanRotate.add(gltf.scene.rotation, 'z').min(-100).max(100).step(0.01);
+        mesh = gltf.scene;
+
+		mesh.traverse(node => {
+			if(node.name == "outfit_5" || node.name == "outfit_1"){
+			node.visible = false;
+			}
+			if(node.name == "outfit_4"){
+			node.visible = true;
+			}
+		});
+		scene.add( mesh);
+		mesh.scale.x = 20;
+		mesh.scale.y = 20;
+		mesh.scale.z = 20;
+		mixer = new THREE.AnimationMixer(gltf.scene);
+		const dance = mixer.clipAction(gltf.animations[0]);
+		dance.play();
+		tick();
+	}
+
+	function changecloth(cl){
+	mesh.traverse(node => {
+		if(cl == "outfit_4"){ 
+			if(node.name == "outfit_5" || node.name == "outfit_1"){
+			node.visible = false;
+			}
+		}
+
+		if(cl == "outfit_1"){ 
+			if(node.name == "outfit_5" || node.name == "outfit_4"){
+			node.visible = false;
+			}
+		}
+
+		if(cl == "outfit_5"){ 
+			if(node.name == "outfit_4" || node.name == "outfit_1"){
+			node.visible = false;
+			}
+		}
+
+			if(node.name == cl){
+			node.visible = true;
+			}
+		});
+		scene.add( mesh);
+	}
+
+
+	function handle_load1(q){
+	amin = q.animations;
+    }
+
+
+	function handle_load123(ind)
+	{
+mesh1 = gl.scene.children[ind]
+skeleton = mesh1.skeleton
+geometry = mesh1.geometry
+var material = new THREE.MeshPhongMaterial( {
+	skinning : true,
+	color: 0x156289,
+	emissive: 0x072534,
+	side: THREE.DoubleSide,
+	flatShading: true,
+	vertexColors: true
+} );
+
+var lineMaterial = new THREE.MeshBasicMaterial({
+	skinning : true,
+	wireframe: true
+});
+
+var new_mesh = new THREE.SkinnedMesh(geometry, [material, lineMaterial])
+
+new_mesh.bind(skeleton)
+debugger;
+skeletonHelper = new THREE.SkeletonHelper(mesh1);
+//skeletonHelper.material.linewidth = 5;
+
+skeletonHelper.material.visible = false;
+scene.add(skeletonHelper);
+
+scene.add(mesh1)
+// mixer1 = new THREE.AnimationMixer(gl.scene);
+// 		gl.animations.forEach( ( clip ) => {
+// 		  mixer1.clipAction( clip ).play();
+// 	  });
+	}
+
+
+	//Render loop
+	render();
+
+	var delta = 0;
+	var prevTime = Date.now();
+
+
+	function init() {
+        // scene = new THREE.Scene();
+        // camera = new THREE.PerspectiveCamera(55,window.innerWidth/window.innerHeight,45,30000);
+        // camera.position.set(-900,-200,-900);
+
+        // renderer = new THREE.WebGLRenderer({antialias:true});
+        // renderer.setSize(window.innerWidth,window.innerHeight);
+        // document.body.appendChild(renderer.domElement);
+
+        // let controls = new THREE.OrbitControls(camera);
+        // controls.addEventListener('change', renderer);
+        // controls.minDistance = 500;
+        // controls.maxDistance = 1500;
+        let materialArray = [];
+        let texture_ft = new THREE.TextureLoader().load( 'https://iaugmentcdnlive.azureedge.net/category/140220223337602.jpg');
+        let texture_bk = new THREE.TextureLoader().load( 'https://iaugmentcdnlive.azureedge.net/category/140220223337602.jpg');
+        let texture_up = new THREE.TextureLoader().load( 'https://iaugmentcdnlive.azureedge.net/category/140220223337602.jpg');
+        let texture_dn = new THREE.TextureLoader().load( 'https://iaugmentcdnlive.azureedge.net/category/140220223337602.jpg');
+        let texture_rt = new THREE.TextureLoader().load( 'https://iaugmentcdnlive.azureedge.net/category/140220223337602.jpg');
+        let texture_lf = new THREE.TextureLoader().load( 'https://iaugmentcdnlive.azureedge.net/category/140220223337602.jpg');
+          
+        materialArray.push(new THREE.MeshBasicMaterial( { map: texture_ft }));
+        materialArray.push(new THREE.MeshBasicMaterial( { map: texture_bk }));
+        materialArray.push(new THREE.MeshBasicMaterial( { map: texture_up }));
+        materialArray.push(new THREE.MeshBasicMaterial( { map: texture_dn }));
+        materialArray.push(new THREE.MeshBasicMaterial( { map: texture_rt }));
+        materialArray.push(new THREE.MeshBasicMaterial( { map: texture_lf }));
+   
+        for (let i = 0; i < 6; i++)
+           materialArray[i].side = THREE.BackSide;
+        let skyboxGeo = new THREE.BoxGeometry( 10000, 10000, 10000);
+        let skybox = new THREE.Mesh( skyboxGeo, materialArray );
+        scene.add( skybox );  
+        animate();
+      }
+
+	function render() {
+		renderer.toneMappingExposure = Math.pow(0.7, 5.0);  // -> exposure: 0.168
+		renderer.render(scene, camera);
+		requestAnimationFrame(render);
+	}
+
+	
+
+	 
+	//===========   New Code   ================
+
+const INITIAL_MTL = new THREE.MeshPhongMaterial({ color: 0xf1f1f1, shininess: 10 });
+const INITIAL_MAP = [
+{ childID: "back", mtl: INITIAL_MTL },
+{ childID: "base", mtl: INITIAL_MTL },
+{ childID: "cushions", mtl: INITIAL_MTL },
+{ childID: "legs", mtl: INITIAL_MTL },
+{ childID: "supports", mtl: INITIAL_MTL }];
+
+	function selectSwatch(obj) {
+  let new_mtl;
+
+  if (obj.texture) {
+
+    let txt = new THREE.TextureLoader().load(obj.texture);
+
+    txt.repeat.set(obj.size[0], obj.size[1], obj.size[2]);
+    txt.wrapS = THREE.RepeatWrapping;
+    txt.wrapT = THREE.RepeatWrapping;
+
+    new_mtl = new THREE.MeshPhongMaterial({
+      map: txt,
+      shininess: obj.shininess ? obj.shininess : 10 });
+
+  } else
+
+  {
+    new_mtl = new THREE.MeshPhongMaterial({
+      color: parseInt(obj.col),
+      shininess: 10 ? 10 : 10 });
+  }
+
+  setMaterial(mesh, obj.partname, new_mtl);
+}
+
+function setMaterial(parent, type, mtl) {
+	
+  parent = parent.children[0];
+  parent.traverse(o => {
+    if (o.isMesh && o.name != null) {
+      if (o.name == type) {
+        o.material = mtl;
+      }
+    }
+  });
+  animate();
+}
+
+var ss = [
+'Mesh.026_0',
+'Mesh.026_1',
+'Mesh.026_2',
+'Mesh.026_3',
+'Mesh.026_4',
+'Mesh.026_5',
+'Mesh.026_6',
+'Mesh.026_7',
+'Mesh.026_8',
+'Mesh.026_9',
+'Mesh.026_10',
+'Mesh.026_11',
+'Mesh.026_12',
+'Mesh.026_13',
+'Mesh.026_14',
+'Mesh.026_15',
+'Mesh.026_16',
+'Mesh.026_17',
+'Mesh.026_18',
+'Mesh.026_19',
+]
+
+function animate() {
+orbit.update();
+renderer.render(scene, camera);
+requestAnimationFrame(animate);
+
+if (resizeRendererToDisplaySize(renderer)) {
+  const canvas = renderer.domElement;
+  camera.aspect = canvas.clientWidth / canvas.clientHeight;
+  camera.updateProjectionMatrix();
+}
+}
+
+function resizeRendererToDisplaySize(renderer) {
+  const canvas = renderer.domElement;
+  var width = window.innerWidth;
+  var height = window.innerHeight;
+  var canvasPixelWidth = canvas.width / window.devicePixelRatio;
+  var canvasPixelHeight = canvas.height / window.devicePixelRatio;
+
+  const needResize = canvasPixelWidth !== width || canvasPixelHeight !== height;
+  if (needResize) {
+
+    renderer.setSize(width, height, false);
+  }
+  return needResize;
+}
+
+let targetX = 0;
+let targetY = 0;
+const clock = new THREE.Clock()
+const tick = () =>
+{
+	if(bit == 1)
+	return false;
+var delta = clock.getDelta();
+if ( mixer ) mixer.update( delta );
+renderer.render(scene, camera)
+window.requestAnimationFrame(tick)
+}
+init();
+ setTimeout(function(){
+ 	//tick()
+ },10)
+	//=========================================
+    </script>
+  </body>
+</html>
